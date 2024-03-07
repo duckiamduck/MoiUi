@@ -17,7 +17,7 @@
 .Header{
   background-color: rgb(189, 189, 236);
   height: 25%;
- border-radius: 20px;
+  border-radius: 20px 20px 0 0 ;
 }
 .Main{
   width: 100%;
@@ -31,6 +31,7 @@
 }
 .Footer{
   background-color:rgb(189, 189, 236);
+  border-radius: 0 0 20px 20px;
   height: 25%;
 }
 </style>

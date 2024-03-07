@@ -1,17 +1,6 @@
 <template>
   <div class="main">
-    <div class="ButtonBlock">
-      <Button></Button>
-      <CautionButton></CautionButton>
-      <LocationButton></LocationButton>
-      <HomeButton></HomeButton>
-
-      <SettingButton></SettingButton>
-      <RefreshButton></RefreshButton>
-      <DownUpButton></DownUpButton>
-      <clButton></clButton>
-      <AddButton></AddButton>
-    </div>
+<ButtonBlock></ButtonBlock>
 
 <div class="ContainerBlock">
 <Container></Container>
@@ -25,22 +14,19 @@
 <moiMenu></moiMenu>
   </div>
   
+  <div class="CuteButtonBlock">
+
+<Star></Star>
+<Joker></Joker>
+<Toolow></Toolow>
   </div>
+  </div>
+
 
 </template>
 
 <script lang="ts" setup>
-//button
-import Button from './components/Button/dangerbutton/index.vue'
-import CautionButton from './components/Button/cuationbutton/index.vue'
-import LocationButton from './components/Button/locationbutton/index.vue'
-import HomeButton from './components/Button/homebutton/index.vue'
-import SettingButton from './components/Button/settingbutton/index.vue'
-import RefreshButton from './components/Button/refreshbutton/index.vue'
-import DownUpButton from './components/Button/downupbuttoin/index.vue'
-import clButton from './components/Button/colectionbutton//index.vue'
-import AddButton from './components/Button/addbutton/index.vue'
-
+import ButtonBlock from '@/view/normalButton/index.vue'
 //
 
 import Container from './components/Container/P3r/index.vue'
@@ -51,10 +37,15 @@ import panda from './components/PastePaper/Panda/index.vue'
 //menu
 import moiMenu from './components/menu/index.vue'
 
+
+//cutebutton
+import Star from './components/cuteButton/StartButton/index.vue'
+import Joker from '@/components/cuteButton/sunglass/index.vue'
+import Toolow from '@/components/cuteButton/lowButton/index.vue'
 </script>
 
 
-<style scoped>
+<style scoped >
  .main{
   display: flex;
   flex-direction: row;
@@ -64,19 +55,12 @@ import moiMenu from './components/menu/index.vue'
   background-color: rgb(221, 144, 144);
   border-radius: 15px;
  }
- .ButtonBlock{
-  width: 24%;
-  height: 500px;
-  display: flex;
-  border-radius: 15px;
-  flex-direction: row;
-  flex-wrap:wrap;
-  justify-content:center;
-  background-color: rosybrown;
- }
+
+
  .ContainerBlock{
   width: 50%;
   height: 500px;
+  border-radius: 15px;
   background-color: rosybrown;
   margin:0 15px 0 20px;
  }
@@ -91,8 +75,20 @@ import moiMenu from './components/menu/index.vue'
   background-color: rosybrown;
  }
  .MenuBlock{
-  width:30%;
+  width:24%;
   height:500px;
-
+  margin: 10px;
+ }
+ .CuteButtonBlock{
+  width: 25%;
+  height: 500px;
+  background-color: rosybrown;
+  border-radius: 15px;
+  box-sizing: border-box;
+  background-image: v-text="sb";
+  padding: 5px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
  }
 </style>
